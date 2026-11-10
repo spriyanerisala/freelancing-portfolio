@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { 
   ArrowRight, 
   MessageSquare, 
@@ -6,16 +6,49 @@ import {
   Code2, 
   Terminal, 
   ShieldCheck, 
-  Zap,
-  GraduationCap,
-  Sparkles,
-  Layers,
-  Cpu,
-  Laptop
+  Zap, 
+  GraduationCap, 
+  Sparkles, 
+  Layers, 
+  Cpu, 
+  Laptop 
 } from 'lucide-react';
 import { PERSONAL_INFO } from '../data/portfolioData';
 
+const ROLES = [
+  "Freelancer",
+  "Full Stack Developer",
+  "Frontend Developer",
+  "Backend Developer",
+  "Web Developer"
+];
+
 export const AboutMe = ({ onNavigate }) => {
+  const [roleIndex, setRoleIndex] = useState(0);
+  const [displayText, setDisplayText] = useState('');
+  const [isDeleting, setIsDeleting] = useState(false);
+
+  useEffect(() => {
+    const currentRole = ROLES[roleIndex];
+    const updateSpeed = isDeleting ? 30 : 65;
+
+    const timer = setTimeout(() => {
+      if (!isDeleting) {
+        setDisplayText(currentRole.substring(0, displayText.length + 1));
+        if (displayText.length + 1 === currentRole.length) {
+          setTimeout(() => setIsDeleting(true), 2000);
+        }
+      } else {
+        setDisplayText(currentRole.substring(0, displayText.length - 1));
+        if (displayText.length === 0) {
+          setIsDeleting(false);
+          setRoleIndex((prev) => (prev + 1) % ROLES.length);
+        }
+      }
+    }, updateSpeed);
+
+    return () => clearTimeout(timer);
+  }, [displayText, isDeleting, roleIndex]);
   return (
     <section style={{ paddingTop: '130px', paddingBottom: '80px', position: 'relative' }}>
       <div className="container">
@@ -89,13 +122,21 @@ export const AboutMe = ({ onNavigate }) => {
           </h1>
 
           <div style={{
-            fontSize: 'clamp(1.1rem, 2.5vw, 1.4rem)',
+            fontSize: 'clamp(1.8rem, 4.5vw, 2.9rem)',
             color: '#38bdf8',
-            fontWeight: 600,
-            marginBottom: '20px',
-            fontFamily: "'Space Grotesk', sans-serif"
+            fontWeight: 800,
+            letterSpacing: '-0.02em',
+            marginBottom: '28px',
+            fontFamily: "'Space Grotesk', sans-serif",
+            minHeight: '2.5em',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            gap: '4px',
+            textShadow: '0 0 35px rgba(56, 189, 248, 0.55), 0 0 70px rgba(59, 130, 246, 0.3)'
           }}>
-            Freelance Full Stack, Frontend & Backend Web Developer
+            <span>{displayText}</span>
+            <span style={{ color: '#38bdf8', fontWeight: 300, fontSize: '1.2em', animation: 'pulseGlow 1s infinite' }}>|</span>
           </div>
 
           <p style={{ 
