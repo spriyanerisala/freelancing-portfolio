@@ -36,15 +36,8 @@ export const AdminDashboardModal = ({ isOpen, onClose }) => {
 
   useEffect(() => {
     if (isOpen) {
-      // Check session
-      const authSession = sessionStorage.getItem('admin_authenticated');
-      if (authSession === 'true') {
-        setIsAuthenticated(true);
-        loadContacts();
-      } else {
-        setIsAuthenticated(false);
-      }
-    } else {
+      // Always require authentication for security
+      setIsAuthenticated(false);
       setLoginError('');
       setLoginEmail('');
       setLoginPassword('');

@@ -31,10 +31,16 @@ export const Navbar = ({ activeTab, onTabChange, onOpenAdmin }) => {
     { id: "projects", name: "Projects", icon: Layers },
     { id: "skills", name: "Skills & Tech", icon: Wrench },
     { id: "workflow", name: "Workflow & FAQ", icon: HelpCircle },
-    { id: "contact", name: "Contact & Hire", icon: Mail }
+    { id: "contact", name: "Contact & Hire", icon: Mail },
+    { id: "admin", name: "Admin Portal", icon: Database, isAdmin: true }
   ];
 
   const handleNavClick = (id) => {
+    if (id === 'admin') {
+      onOpenAdmin();
+      setMobileMenuOpen(false);
+      return;
+    }
     onTabChange(id);
     setMobileMenuOpen(false);
     window.scrollTo({ top: 0, behavior: 'smooth' });

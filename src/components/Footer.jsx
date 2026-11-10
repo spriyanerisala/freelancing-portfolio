@@ -89,9 +89,22 @@ export const Footer = () => {
           color: 'var(--text-dim)'
         }}>
           <div>
-            © {new Date().getFullYear()} Siva Priya Nerisala. All Rights Reserved.
+            © {new Date().getFullYear()} NERISALA SIVA PRIYA. All Rights Reserved.
           </div>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
+            <button
+              onClick={onOpenAdmin}
+              style={{
+                background: 'none',
+                border: 'none',
+                color: '#38bdf8',
+                cursor: 'pointer',
+                fontSize: '0.82rem',
+                textDecoration: 'underline'
+              }}
+            >
+              🔒 Admin Login
+            </button>
             <span>Engineered with React.js & Modern Web Standards</span>
           </div>
         </div>

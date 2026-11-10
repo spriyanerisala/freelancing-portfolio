@@ -66,7 +66,7 @@ export function App() {
         )}
       </main>
 
-      <Footer onNavigate={handleNavigate} />
+      <Footer onNavigate={handleNavigate} onOpenAdmin={() => setIsAdminOpen(true)} />
 
       {/* Local Frontend Admin Modal */}
       <AdminDashboardModal 
