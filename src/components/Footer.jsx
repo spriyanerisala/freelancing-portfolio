@@ -3,7 +3,7 @@ import { ArrowUp, Heart, MessageSquare, Mail } from 'lucide-react';
 import { LinkedinIcon, GithubIcon } from './Icons';
 import { PERSONAL_INFO } from '../data/portfolioData';
 
-export const Footer = () => {
+export const Footer = ({ onOpenAdmin, onNavigate }) => {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
