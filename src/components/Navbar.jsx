@@ -87,12 +87,12 @@ export const Navbar = ({ activeTab, onTabChange, onOpenAdmin }) => {
               }}
             />
           </div>
-          <div>
-            <div style={{ fontWeight: 800, fontSize: '1.02rem', letterSpacing: '-0.02em', display: 'flex', alignItems: 'center', gap: '6px' }}>
+          <div style={{ flexShrink: 0 }}>
+            <div style={{ fontWeight: 800, fontSize: '1.02rem', letterSpacing: '-0.02em', display: 'flex', alignItems: 'center', gap: '6px', whiteSpace: 'nowrap' }}>
               <span>NERISALA</span>
               <span style={{ color: '#38bdf8' }}>SIVA PRIYA</span>
             </div>
-            <div style={{ fontSize: '0.72rem', color: '#94a3b8', fontFamily: "'JetBrains Mono', monospace" }}>
+            <div style={{ fontSize: '0.72rem', color: '#94a3b8', fontFamily: "'JetBrains Mono', monospace", whiteSpace: 'nowrap' }}>
               Freelancer & Web Engineer
             </div>
           </div>
@@ -227,7 +227,7 @@ export const Navbar = ({ activeTab, onTabChange, onOpenAdmin }) => {
       )}
 
       <style>{`
-        @media (min-width: 960px) {
+        @media (min-width: 1200px) {
           .desktop-nav { display: flex !important; }
           .mobile-toggle { display: none !important; }
           .admin-badge-desktop { display: flex !important; }
