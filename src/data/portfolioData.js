@@ -90,7 +90,7 @@ export const PROJECTS = [
     description: "A production-ready, realistic, premium healthcare web application featuring modern UI/UX, an appointment booking engine, server-verified Razorpay payment integration, Supabase authentication & Row Level Security (RLS), and dedicated role-based portals for Patients, Doctors, and Hospital Administrators.",
     tech: ["React.js", "Express.js", "Node.js", "Supabase (Database)", "Razorpay"],
     demo: "https://avenue-hospital.vercel.app/",
-    github: "https://github.com/spriyanerisala",
+    github: "https://github.com/spriyanerisala/avenue-hospital",
     isFlagship: true,
     highlights: [
       "Server-verified Razorpay payment flow",
@@ -109,7 +109,7 @@ export const PROJECTS = [
     description: "A luxury salon & beauty studio web application featuring an editorial aesthetic with Cormorant Garamond typography, an interactive booking engine with direct WhatsApp confirmation formatting, an automated beauty concierge chatbot ('Aura'), and an administrative manager dashboard.",
     tech: ["React.js", "Tailwind CSS", "Framer Motion"],
     demo: "https://aura-bliss-saloon.vercel.app/",
-    github: "https://github.com/spriyanerisala",
+    github: "https://github.com/spriyanerisala/saloon-web",
     isFlagship: true,
     highlights: [
       "Bespoke editorial luxury design with fluid micro-interactions",
