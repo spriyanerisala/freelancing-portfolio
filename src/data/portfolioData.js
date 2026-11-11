@@ -1,7 +1,7 @@
 export const PERSONAL_INFO = {
   name: "NERISALA SIVA PRIYA",
-  tagline: "Freelancer • Full Stack • Frontend • Backend • Web Application Developer",
-  shortBio: "Freelance Full-Stack & Web Engineer building high-performance, realistic, client-grade web applications with React, Node.js, Supabase, and tailored AI workflows.",
+  tagline: "Freelancer • Full Stack Developer • AI & Workflow Automation Engineer",
+  shortBio: "Freelance Full-Stack & AI Automation Engineer building high-performance, realistic, client-grade web applications with React, Node.js, Supabase, n8n, and tailored AI workflows.",
   availability: "Available for Freelance Contracts & Remote Projects",
   status: "🟢 Taking on Client Projects",
   location: "Remote (Global)",
@@ -28,12 +28,11 @@ export const SERVICES = [
     title: "Full Stack Web Development",
     subtitle: "End-to-end web apps from architecture to deployment",
     badge: "Most Requested",
-    description: "Complete design, frontend UI, backend API engine, secure databases, user authentication, and cloud deployment on Vercel/Render.",
+    description: "Complete design, frontend UI, backend API engine, secure databases, user authentication, and cloud deployment on Vercel/Netlify/Render.",
     deliverables: [
       "Custom RESTful APIs & MVC Architecture",
       "Supabase / MongoDB / Redis integration",
-      "Authentication & Role-Based Access (RLS/JWT)",
-      "Production deployment with CI/CD"
+      "Authentication & Role-Based Access (RLS/JWT)"
     ],
     tech: ["React.js", "Node.js", "Express.js", "Supabase", "MongoDB"]
   },
@@ -77,7 +76,7 @@ export const SERVICES = [
       "RAG vector database search (Qdrant)",
       "Gemini & OpenAI API integration"
     ],
-    tech: ["n8n", "Gemini API", "Qdrant", "RAG", "AI Agents"]
+    tech: ["n8n", "LLMs", "Gemini API", "Qdrant", "RAG", "AI Agents"]
   }
 ];
 
@@ -88,7 +87,7 @@ export const PROJECTS = [
     category: "Full Stack",
     tagline: "Realistic Healthcare App with Payments & Role Portals",
     image: "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=1200&q=80",
-    description: "A production-ready, realistic, premium healthcare web application featuring modern UI/UX, AI-generated medical photography, appointment booking engine, server-verified Razorpay payment integration, Supabase authentication & Row Level Security (RLS), and dedicated role-based portals for Patients, Doctors, and Hospital Administrators.",
+    description: "A production-ready, realistic, premium healthcare web application featuring modern UI/UX, an appointment booking engine, server-verified Razorpay payment integration, Supabase authentication & Row Level Security (RLS), and dedicated role-based portals for Patients, Doctors, and Hospital Administrators.",
     tech: ["React.js", "Express.js", "Node.js", "Supabase (Database)", "Razorpay"],
     demo: "https://avenue-hospital.vercel.app/",
     github: "https://github.com/spriyanerisala",
@@ -97,8 +96,7 @@ export const PROJECTS = [
       "Server-verified Razorpay payment flow",
       "Supabase Authentication & Row Level Security (RLS)",
       "Tri-role portals: Patients, Doctors, & Admins",
-      "Dynamic Doctor Appointment booking engine",
-      "AI-generated high-res medical visual asset direction"
+      "Dynamic Doctor Appointment booking engine"
     ],
     freelanceOutcome: "Demonstrates capability to engineer mission-critical, HIPAA-conscious, FinTech-integrated platforms with complex permission layers."
   },
@@ -131,6 +129,8 @@ export const PROJECTS = [
     description: "All-in-one AI student learning and career platform featuring interactive course viewers, a 24/7 AI mentor, n8n-powered PDF note summarization, smart resume ATS scoring, AI mock interview simulator, and placement analytics.",
     tech: ["React.js", "TypeScript", "Tailwind CSS", "n8n", "Supabase", "Stripe"],
     demo: "https://student-copilot-ten.vercel.app/",
+    imagesUrl: "https://github.com/spriyanerisala/student_copilot/tree/main/project_pics",
+    statusNotice: "n8n monthly subscription is completed — this project is live, but backend automation workflows are currently inactive.",
     github: "https://github.com/spriyanerisala/student_copilot",
     isFlagship: false,
     highlights: [
@@ -150,6 +150,8 @@ export const PROJECTS = [
     description: "Developed an AI-powered career assistant for resume analysis, ATS scoring, job matching, interview preparation, and role-specific resume generation using React.js, Tailwind CSS, n8n, and Gemini AI.",
     tech: ["React.js", "Tailwind CSS", "n8n", "Gemini AI"],
     demo: "https://ai-job-copilot-jet.vercel.app/",
+    imagesUrl: "https://github.com/spriyanerisala/ai_job_copilot/tree/main/ai_job_copilot_images",
+    statusNotice: "n8n monthly subscription is completed — this project is live, but backend automation workflows are currently inactive.",
     github: "https://github.com/spriyanerisala/ai_job_copilot.git",
     isFlagship: false,
     highlights: [
@@ -169,6 +171,8 @@ export const PROJECTS = [
     description: "AI-powered resume analysis chatbot with semantic search and vector embeddings. Implemented a RAG-based workflow to answer natural language questions from resume data with context-aware responses built with React.js, n8n, and Qdrant vector database.",
     tech: ["React.js", "n8n", "Qdrant", "Embeddings", "LLMs"],
     demo: "https://resume-analyser-khaki-zeta.vercel.app/",
+    imagesUrl: "https://github.com/spriyanerisala/resume_analyse_n8n_vector_rag/tree/main/images_n8n",
+    statusNotice: "n8n monthly subscription is completed — this project is live, but backend automation workflows are currently inactive.",
     github: "https://github.com/spriyanerisala/resume_analyse_n8n_vector_rag.git",
     isFlagship: false,
     highlights: [
@@ -214,7 +218,7 @@ export const SKILL_CATEGORIES = [
   {
     name: "Databases & Cloud",
     icon: "Database",
-    skills: ["MySQL", "Supabase (PostgreSQL)", "MongoDB", "Redis (Caching)", "Row Level Security (RLS)", "Vercel", "Render"]
+    skills: ["MySQL", "Supabase (PostgreSQL)", "MongoDB", "Redis (Caching)", "Row Level Security (RLS)", "Vercel", "Netlify", "Render"]
   },
   {
     name: "FinTech & Payments",
@@ -224,12 +228,12 @@ export const SKILL_CATEGORIES = [
   {
     name: "AI & Automation",
     icon: "Cpu",
-    skills: ["n8n Workflow Automation", "AI Agents", "Gemini API", "RAG Architecture", "Qdrant Vector DB", "Model Context Protocol (MCP)"]
+    skills: ["n8n Workflow Automation", "AI Agents", "LLMs", "Vector Embeddings", "Gemini API", "RAG Architecture", "Qdrant Vector DB", "Model Context Protocol (MCP)"]
   },
   {
     name: "Workflow & Tools",
     icon: "Wrench",
-    skills: ["Git & GitHub", "Postman", "Cursor", "Antigravity", "Claude AI", "VS Code", "Vite"]
+    skills: ["Git & GitHub", "Postman", "Cursor", "Antigravity", "Claude AI", "VS Code"]
   }
 ];
 

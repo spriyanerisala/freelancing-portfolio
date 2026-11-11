@@ -18,6 +18,7 @@ import { PERSONAL_INFO } from '../data/portfolioData';
 const ROLES = [
   "Freelancer",
   "Full Stack Developer",
+  "AI & Workflow Automation Engineer",
   "Frontend Developer",
   "Backend Developer",
   "Web Developer"

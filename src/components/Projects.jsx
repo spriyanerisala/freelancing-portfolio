@@ -5,7 +5,9 @@ import {
   CheckCircle, 
   Star, 
   ArrowUpRight, 
-  Code 
+  Code,
+  Image,
+  AlertCircle
 } from 'lucide-react';
 import { GithubIcon } from './Icons';
 import { PROJECTS } from '../data/portfolioData';
@@ -168,18 +170,67 @@ export const Projects = () => {
                       </div>
                     </div>
 
+                    {/* Status Notice if applicable */}
+                    {project.statusNotice && (
+                      <div style={{
+                        background: 'rgba(245, 158, 11, 0.1)',
+                        border: '1px solid rgba(245, 158, 11, 0.3)',
+                        borderRadius: '10px',
+                        padding: '10px 14px',
+                        fontSize: '0.82rem',
+                        color: '#fbbf24',
+                        display: 'flex',
+                        alignItems: 'flex-start',
+                        gap: '10px',
+                        marginBottom: '20px',
+                        lineHeight: 1.5
+                      }}>
+                        <AlertCircle size={16} color="#f59e0b" style={{ marginTop: '2px', flexShrink: 0 }} />
+                        <span>{project.statusNotice}</span>
+                      </div>
+                    )}
+
                     {/* Actions */}
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '14px', marginTop: 'auto', paddingTop: '10px' }}>
-                      <a 
-                        href={project.demo} 
-                        target="_blank" 
-                        rel="noreferrer" 
-                        className="btn-primary" 
-                        style={{ flex: 1, padding: '10px 18px' }}
-                      >
-                        <span>Live Demo</span>
-                        <ArrowUpRight size={16} />
-                      </a>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginTop: 'auto', paddingTop: '10px' }}>
+                      {project.imagesUrl ? (
+                        <a 
+                          href={project.imagesUrl} 
+                          target="_blank" 
+                          rel="noreferrer" 
+                          className="btn-primary" 
+                          style={{ flex: 1, padding: '10px 16px', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: '8px' }}
+                          title="View Project Screenshots on GitHub"
+                        >
+                          <Image size={16} />
+                          <span>Project Images</span>
+                        </a>
+                      ) : (
+                        <a 
+                          href={project.demo} 
+                          target="_blank" 
+                          rel="noreferrer" 
+                          className="btn-primary" 
+                          style={{ flex: 1, padding: '10px 18px' }}
+                        >
+                          <span>Live Demo</span>
+                          <ArrowUpRight size={16} />
+                        </a>
+                      )}
+
+                      {project.imagesUrl && project.demo && (
+                        <a 
+                          href={project.demo} 
+                          target="_blank" 
+                          rel="noreferrer" 
+                          className="btn-secondary" 
+                          style={{ padding: '10px 14px', display: 'inline-flex', alignItems: 'center', gap: '6px' }}
+                          title="Visit Live Deployment"
+                        >
+                          <span>Live Demo</span>
+                          <ExternalLink size={15} />
+                        </a>
+                      )}
+
                       <a 
                         href={project.github} 
                         target="_blank" 
@@ -249,9 +300,29 @@ export const Projects = () => {
                     {project.tagline}
                   </div>
 
-                  <p style={{ color: 'var(--text-muted)', fontSize: '0.88rem', lineHeight: 1.55, marginBottom: '20px', flexGrow: 1 }}>
+                  <p style={{ color: 'var(--text-muted)', fontSize: '0.88rem', lineHeight: 1.55, marginBottom: '16px', flexGrow: 1 }}>
                     {project.description}
                   </p>
+
+                  {/* Status Notice if applicable */}
+                  {project.statusNotice && (
+                    <div style={{
+                      background: 'rgba(245, 158, 11, 0.1)',
+                      border: '1px solid rgba(245, 158, 11, 0.3)',
+                      borderRadius: '8px',
+                      padding: '9px 12px',
+                      fontSize: '0.78rem',
+                      color: '#fbbf24',
+                      display: 'flex',
+                      alignItems: 'flex-start',
+                      gap: '8px',
+                      marginBottom: '16px',
+                      lineHeight: 1.45
+                    }}>
+                      <AlertCircle size={15} color="#f59e0b" style={{ marginTop: '2px', flexShrink: 0 }} />
+                      <span>{project.statusNotice}</span>
+                    </div>
+                  )}
 
                   {/* Tech Tags */}
                   <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px', marginBottom: '20px' }}>
@@ -263,17 +334,46 @@ export const Projects = () => {
                   </div>
 
                   {/* Action Links */}
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '10px', borderTop: '1px solid rgba(255, 255, 255, 0.06)', paddingTop: '16px' }}>
-                    <a 
-                      href={project.demo} 
-                      target="_blank" 
-                      rel="noreferrer" 
-                      className="btn-primary" 
-                      style={{ flex: 1, padding: '8px 14px', fontSize: '0.82rem' }}
-                    >
-                      <span>View Live</span>
-                      <ExternalLink size={14} />
-                    </a>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '8px', borderTop: '1px solid rgba(255, 255, 255, 0.06)', paddingTop: '16px' }}>
+                    {project.imagesUrl ? (
+                      <a 
+                        href={project.imagesUrl} 
+                        target="_blank" 
+                        rel="noreferrer" 
+                        className="btn-primary" 
+                        style={{ flex: 1, padding: '8px 12px', fontSize: '0.82rem', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: '6px' }}
+                        title="View Project Screenshots on GitHub"
+                      >
+                        <Image size={14} />
+                        <span>Project Images</span>
+                      </a>
+                    ) : (
+                      <a 
+                        href={project.demo} 
+                        target="_blank" 
+                        rel="noreferrer" 
+                        className="btn-primary" 
+                        style={{ flex: 1, padding: '8px 14px', fontSize: '0.82rem' }}
+                      >
+                        <span>View Live</span>
+                        <ExternalLink size={14} />
+                      </a>
+                    )}
+
+                    {project.imagesUrl && project.demo && (
+                      <a 
+                        href={project.demo} 
+                        target="_blank" 
+                        rel="noreferrer" 
+                        className="btn-secondary" 
+                        style={{ padding: '8px 10px', fontSize: '0.8rem', display: 'inline-flex', alignItems: 'center', gap: '4px' }}
+                        title="Visit Live Deployment"
+                      >
+                        <span>Live Demo</span>
+                        <ExternalLink size={13} />
+                      </a>
+                    )}
+
                     <a 
                       href={project.github} 
                       target="_blank" 
