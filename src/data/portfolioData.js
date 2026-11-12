@@ -15,7 +15,7 @@ export const PERSONAL_INFO = {
     email: "mailto:nspriya005@gmail.com"
   },
   stats: [
-    { label: "Production Web Apps", value: "7+" },
+    { label: "Production Web Apps", value: "8+" },
     { label: "Core Roles Covered", value: "4-in-1" },
     { label: "Avg. Turnaround", value: "1–3 Wks" },
     { label: "Code Quality & Uptime", value: "99.9%" }
@@ -119,6 +119,25 @@ export const PROJECTS = [
       "Administrative manager dashboard for scheduling and salon ops"
     ],
     freelanceOutcome: "Showcases premium branding execution, luxury consumer aesthetics, high-converting customer booking journeys, and smooth client engagement."
+  },
+  {
+    id: "titan-forge-gym",
+    title: "Titan Forge Gym — Elite Athletic Club",
+    category: "Frontend & UI/UX",
+    tagline: "High-Performance Athletic Fitness Web App with Plan Selector",
+    image: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1200&q=80",
+    description: "A modern, high-impact athletic fitness and gym club web application featuring an interactive membership tier selector, dynamic fitness programs catalog, 1-on-1 coach booking engine, gym facilities tour, animated promotional offers with confetti celebrations, and a dedicated AI fitness concierge chatbot.",
+    tech: ["React.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
+    demo: "https://gym-web-gules-gamma.vercel.app/",
+    github: "https://github.com/spriyanerisala/gym_web",
+    isFlagship: false,
+    highlights: [
+      "Interactive membership tier selector with custom inquiry routing",
+      "Dynamic fitness programs catalog & 1-on-1 trainer booking system",
+      "Interactive gym concierge chatbot & floating WhatsApp booking integration",
+      "High-contrast dark-mode athletic UI with Framer Motion micro-interactions"
+    ],
+    freelanceOutcome: "Demonstrates mastery of fast modern frontend architectures, high-converting commercial landing pages, and interactive client booking funnels."
   },
   {
     id: "studentpilot-ai",
